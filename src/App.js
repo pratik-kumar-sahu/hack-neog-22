@@ -1,11 +1,15 @@
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Home, Items } from './pages';
 
-function App() {
-  return (
-    <div className="App">
-      HackNeoG@2022
-    </div>
-  );
-}
+const App = () => {
+	return (
+		<BrowserRouter>
+			<Routes>
+				<Route path='/' element={<Home />} />
+				<Route path='/items' element={<Items />} />
+			</Routes>
+		</BrowserRouter>
+	);
+};
 
 export default App;
